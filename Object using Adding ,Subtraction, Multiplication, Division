@@ -1,0 +1,63 @@
+package com.Jaisurya.Thadoju;
+
+public class ObjectSubtraction {
+	int i;
+	int j;
+
+	public ObjectSubtraction() {
+		
+		i=20;
+		j=10;
+	}
+	
+	public ObjectSubtraction(int i,int j) {
+		this.i =i;
+		this.j=j;
+	}
+
+	public static void main(String[] args) {
+		
+		ObjectSubtraction O1 = new ObjectSubtraction();
+		ObjectSubtraction O2 = new ObjectSubtraction(30,40);
+		
+		System.out.println("Addition values:");
+		
+		System.out.println(O1.add());
+		System.out.println(O2.add());
+		
+		System.out.println();
+		
+		System.out.println("Subtraction values:");
+		
+		System.out.println(O1.subtract());
+		System.out.println(O2.subtract());
+		
+		System.out.println();
+		
+		System.out.println("Multiplication values:");
+		
+		System.out.println(O1.multiplication());
+		System.out.println(O2.multiplication());
+		
+		System.out.println();
+		
+		System.out.println("Division values:");
+		
+		System.out.println(O1.division());
+		System.out.println(O2.division());
+
+	}
+	public int add() {
+		return i+j;
+	}
+	public int subtract() {
+		return i-j;
+	}
+	public int multiplication() {
+		return i*j;
+	}
+	public int division() {
+		return i%j;
+	}
+
+}
