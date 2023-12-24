@@ -1,0 +1,38 @@
+Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the array size : ");
+		int n = sc.nextInt();
+		
+		System.out.println("Enter the array values :");
+		int[] arr = new int[n];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i]= sc.nextInt();
+		}
+		int largest = arr[0];
+		for (int i = 0; i < arr.length; i++) {
+			if(largest<arr[i]) {
+				largest = arr[i];
+			}
+		}
+		System.out.println("First Largest :"+largest);
+
+
+//second largest
+		int Second_Largest = arr[0];
+		for (int i = 0; i < arr.length; i++) {
+			if(Second_Largest<arr[i] && largest!=arr[i]) {
+				Second_Largest = arr[i];
+			}
+		}
+		System.out.println("Second Largest : "+Second_Largest);
+
+
+//third largest
+    int Third_largest = arr[0];
+    for(int i =0; i<arr.length ; i++) {
+      if(third_largest < arr[i] && Second_Largest!=arr[i] && third_largest!=arr[i]){
+        third_largest = arr[i];
+      }
+   }
+   System.out.printlnt("Third largest : "+thrid_largest);
+
+		
