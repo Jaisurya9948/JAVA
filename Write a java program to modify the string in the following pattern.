@@ -1,0 +1,47 @@
+package Strings;
+
+import java.util.Scanner;
+
+public class Even_place_reverse_odd_place_uppercase_for_a_string {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the String :");
+		String s1 = sc.nextLine();
+		String[] s2 = s1.split(" ");
+		
+		for (int i = 0; i < s2.length; i++) {
+			String word = s2[i];
+			if(i%2==0) {
+				String uppercase="";
+				uppercase = s2[i].toUpperCase();
+				System.out.print(uppercase+" ");
+				
+				
+			}
+			else {
+				String reversestring = getString(word);
+				System.out.print(reversestring+" ");
+				
+				if(i!=word.length()) {
+					reversestring = reversestring + " ";
+				}
+				else {
+					reversestring = reversestring;
+				}
+			}
+			
+	
+		}
+	}
+	private static String getString(String inputdata) {
+		String Reversestring="";
+		for(int j=inputdata.length()-1; j>=0; j--) {
+			Reversestring = Reversestring + inputdata.charAt(j);
+			
+		}
+		return Reversestring;
+		
+	}
+
+}
